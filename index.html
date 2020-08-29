@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="random-number" class="form-control" type="text" >
+                    <button id="generate-pin" class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input id="input-area-display" class="form-control" type="text">
+                    <div class="numbers">
+                        <div id="special" class="calc-body">
+                            <div class="calc-button-row">
+                              <div id="main-input7" class="button">7</div>
+                              <div id="main-input8" class="button">8</div>
+                              <div id="main-input9" class="button">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div id="main-input4"  class="button">4</div>
+                              <div id="main-input5"  class="button">5</div>
+                              <div id="main-input6"  class="button">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div id="main-input1" class="button">1</div>
+                              <div id="main-input2"  class="button">2</div>
+                              <div id="main-input3"  class="button">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button"><</div>
+                                <div id="main-input0" class="button">0</div>
+                                <div class="button">C</div>
+                            </div>
+                            <div>
+                                <button type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left">3 try left</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </d iv>
+        <div class="notify-section">
+            <!-- <p class="notify">❌ Pin Didn't Match, Please try again</p>
+            <p class="notify">✅ Pin Matched... Secret door is opening for you</p> -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("generate-pin").addEventListener("click", function(){
+        let randomNumber = document.getElementById("random-number");
+        randomNumber.value = (Math.floor((Math.random() * 100000) + 1));
+        //    console.log((Math.floor((Math.random() * 100000) + 1)));
+        });
+
+        // document.getElementById("main-input").addEventListener("click", function() {
+        //      var inputAreaDisplay = document.getElementById("main-input").value;
+        //     document.getElementById("input-area-display").innerText = inputAreaDisplay;
+        // })
+
+        document.getElementById("special").addEventListener("click", function() {
+            // console.log("kick");
+         var inputBox = document.getElementById("input-area-display");
+         var clickedNum = document.getElementsByClassName("button").innerText.value;
+         inputBox.value = clickedNum;
+        })
+
+        // document.getElementById("main-input2").addEventListener("click", function() {
+        //     // console.log("kick");
+        //  var inputBox = document.getElementById("input-area-display");
+        //  inputBox.value = 2;
+        // })
+
+
+ function numPrint(main_input, x){
+    document.getElementById("main_input").addEventListener("click", function() {
+            // console.log("kick");
+         var inputBox = document.getElementById("input-area-display");
+         inputBox.value = x;
+        })
+ }
+
+numPrint(main-input1, 1);
+numPrint(main-input2, 2);
+        
+    </script>
+</body>
+</html>
