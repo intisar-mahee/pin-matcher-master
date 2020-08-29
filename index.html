@@ -18,7 +18,7 @@
             </div>
             <div class="col-md-6">
                 <div class="input-section half-width">
-                    <input id="input-area-display" class="form-control" type="text">
+                    <input id="input-area-display" id="demo" class="form-control" type="text">
                     <div class="numbers">
                         <div id="special" class="calc-body">
                             <div class="calc-button-row">
@@ -59,38 +59,34 @@
         document.getElementById("generate-pin").addEventListener("click", function(){
         let randomNumber = document.getElementById("random-number");
         randomNumber.value = (Math.floor((Math.random() * 100000) + 1));
-        //    console.log((Math.floor((Math.random() * 100000) + 1)));
         });
+
+
 
         // document.getElementById("main-input").addEventListener("click", function() {
         //      var inputAreaDisplay = document.getElementById("main-input").value;
         //     document.getElementById("input-area-display").innerText = inputAreaDisplay;
         // })
 
-        document.getElementById("special").addEventListener("click", function() {
+
+        document.getElementById("main-input2").addEventListener("click", function() {
             // console.log("kick");
          var inputBox = document.getElementById("input-area-display");
-         var clickedNum = document.getElementsByClassName("button").innerText.value;
-         inputBox.value = clickedNum;
+         inputBox.value = 2;
         })
 
-        // document.getElementById("main-input2").addEventListener("click", function() {
-        //     // console.log("kick");
-        //  var inputBox = document.getElementById("input-area-display");
-        //  inputBox.value = 2;
-        // })
 
 
- function numPrint(main_input, x){
-    document.getElementById("main_input").addEventListener("click", function() {
+    document.getElementById("main-input1").addEventListener("click", function() {
             // console.log("kick");
          var inputBox = document.getElementById("input-area-display");
-         inputBox.value = x;
+         inputBox.value = 1;
         })
- }
+ 
 
-numPrint(main-input1, 1);
-numPrint(main-input2, 2);
+
+
+
         
     </script>
 </body>
